@@ -1,0 +1,23 @@
+<html>
+<title>Ordering Platform</title>
+
+
+<div class="container">
+<div class="jumbotron">
+	<h1> Pescado Tank - Order Centre  Click to view</h1>
+<%= link_to "New Order", '/orders/new', class: "btn btn-warning" %>
+
+<br>
+<p>
+
+<div class="well" class="col-md-4">
+	
+<% @orders.each do |order| %><li>
+<%=	link_to order.company, order %></li>
+<% end %>
+
+</div>
+</div>
+</div>
+
+</html>

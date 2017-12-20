@@ -1,0 +1,130 @@
+<div class="container">
+	<div class="well">
+		<div class="row">	
+			<div class="col-md-6">
+	
+	<%= form_for(@order, url: submit_path) do |f| %>
+	<%= render 'shared/error_messages' %>
+
+	<%= f.label :company, "Customer/Company Name" %>
+	<%= f.text_field :company, class: 'form-control' %>
+	<p>
+	
+	<%= f.label :address, "Installation Address" %>
+	<%= f.text_area :address, class: 'form-control' %>
+	<p>
+
+	<%= f.label :postcode, "Installation Postcode" %>
+	<%= f.text_field :postcode, class: 'form-control' %>
+	<p>
+
+	<%= f.label :provider, "Provider Used" %>
+	<%= f.text_field :provider, class: 'form-control' %>
+	<p>
+	
+	<%= f.label :alk, "ALK" %>
+	<%= f.text_field :alk, class: 'form-control' %>
+	<p>
+
+	<%= f.label :cssdistrict, "CSSDistrict Code" %>
+	<%= f.text_field :cssdistrict, class: 'form-control' %>
+	<p>
+	</div>
+	<div class="col-md-6">
+	<%= f.label :lorn, "Linked Order Ref (LORN)" %>
+	<%= f.text_field :lorn, class: 'form-control' %>
+	<p>
+
+	<%= f.label :appoint, "Appointment Code" %>
+	<%= f.text_field :appoint, class: 'form-control' %>
+	<p>
+
+	<%= f.label :product, "Product Type" %>
+	<%= f.text_field :product, class: 'form-control' %>
+	<p>
+
+	<%= f.label :numbercircref, "Number/Circuit Ref" %>
+	<%= f.text_field :numbercircref, class: 'form-control' %>
+	<p>
+
+	<%= f.label :numbercircref, "Number/Circuit Ref (Optional)" %>
+	<%= f.text_field :numbercircref, class: 'form-control' %>
+	<p>
+
+	<%= f.label :login, "Broadband Service Login" %>
+	<%= f.text_field :login, class: 'form-control' %>
+	<p>
+
+	<%= f.label :password, "Broadband Service Password" %>
+	<%= f.text_field :password, class: 'form-control' %>
+	<p>
+
+	</div>
+	</div>
+	</div>
+<br>
+	<div class="well">
+	<div class="row">
+	<div class="col-md-6">
+
+	
+	<%= f.label :ip, "IP Address" %>
+	<%= f.text_field :ip, class: 'form-control' %>
+	<p>
+
+	<%= f.label :ordereddate, "Ordered Date" %>
+	<%= f.text_field :ordereddate, class: 'form-control' %>
+	<p>
+
+	<%= f.label :installdate, "Install Date" %>
+	<%= f.text_field :installdate, class: 'form-control' %>
+	<p>
+
+	<%= f.label :prtg, "PRTG Complete" %>
+	<%= f.check_box :prtg, class: 'form-control' %>
+	<p>
+
+	<%= f.label :keepass, "Keepass Complete" %>
+	<%= f.check_box :keepass, class: 'form-control' %>
+	<p>
+
+	<%= f.label :billed, "Billed?" %>
+	<%= f.check_box :billed, class: 'form-control' %>
+	
+	<div class="col-md-6">
+
+	<%= f.label :commandid1, "Command ID" %>
+	<%= f.text_field :commandid1, class: 'form-control' %>
+	<p>
+
+	<%= f.label :commandid2, "Command ID2 (if applicable)" %>
+	<%= f.text_field :commandid2, class: 'form-control' %>
+	<p>
+
+	<%= f.label :migration, "Migration" %>
+	<%= f.check_box :migration, class: 'form-control' %>
+	<p>
+
+	<%= f.label :newprovide, "New Provide" %>
+	<%= f.check_box :newprovide, class: 'form-control' %>
+	<p>
+
+	<%= f.label :misc, "Miscellaneous/Notes" %>
+	<%= f.text_area :misc, class: 'form-control' %>
+	<p>
+
+	<%= f.label :speed, "Service Speed" %>
+	<%= f.text_field :speed, class: 'form-control' %>
+	<p>
+
+	<%= f.label :live, "Live" %>
+	<%= f.check_box :live, class: 'form-control' %>
+	<p>
+		</div>
+	</div>
+</div>
+
+		<%= f.submit "Save Order", class: 'btn btn-warning' %>
+	<% end %>	
+
+</div>
